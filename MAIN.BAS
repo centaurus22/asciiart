@@ -1,5 +1,6 @@
 DECLARE SUB printRow (row$, startPosX%, startPosY%)
-DECLARE SUB printCharakter (charakter$, startPosX%, startPosY%)
+DECLARE FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
+DECLARE FUNCTION printChar (asciiArt$())
 REM $INCLUDE: 'ALPHABET.BI'
 
 '** Data *************************
@@ -13,20 +14,35 @@ textToPrint$(1) = "Metaller"
 '*********************************
 
 FOR numRow% = 0 TO heightText% - 1
-        startPosY% = startPosY% + heightCharakter * numRow%
+        startPosY% = startPosY% + heightChar * numRow%
         CALL printRow(textToPrint$(numRow%), startPosX%, startPosY%)
 NEXT numRow%
 
-SUB printCharakter (charakter$, startPosX%, startPosY%)
-        PRINT charakter$
-END SUB
+FUNCTION printChar (asciiArt$())
+        FOR asciiArtRowNumber% = 0 TO heightChar - 1
+            PRINT asciiArt$(asciiArtRowNumber%)
+        NEXT
+
+        printChar = LEN(asciiArt$(0))
+END FUNCTION
 
 SUB printRow (row$, startPosX%, startPosY%)
         widthText% = LEN(row$)
-        FOR numCharakter% = 0 TO widthText% - 1
-                startPosX% = startPosX% + numCharakter * widthCharakter
-                charakter$ = MID$(row$, numCharakter% + 1, 1)
-                CALL printCharakter(charakter$, startPosX%, startPosY%)
-        NEXT numCharakter%
+        FOR numChar% = 0 TO widthText% - 1
+                startPosX% = startPosX% + widthChar
+                char$ = MID$(row$, numChar% + 1, 1)
+                witdhChar = selectAndPrintChar(char$, startPosX%, startPosY%)
+        NEXT
 END SUB
+
+FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
+        SELECT CASE char$
+             CASE "R"
+                widthChar% = printChar(uppercaseR())
+             CASE ELSE
+                widthChar% = 0
+        END SELECT
+
+        selectAndPrintChar = widthChar%
+END FUNCTION
 

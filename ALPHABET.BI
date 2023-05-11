@@ -1,9 +1,7 @@
-DIM SHARED uppercaseR(7) AS STRING * 10
-DIM SHARED widthCharakter AS INTEGER
-DIM SHARED heightCharakter AS INTEGER
+DIM SHARED uppercaseR(7) AS STRING
+DIM SHARED heightChar AS INTEGER
 
-heightCharakter = 8
-widthCharakter = 8
+heightChar = 8
 
 uppercaseR(0) = "888888b.  "
 uppercaseR(1) = "888  Y88b "
