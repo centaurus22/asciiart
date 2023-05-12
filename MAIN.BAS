@@ -14,6 +14,7 @@ textToPrint$(1) = "Metaller"
 '*********************************
 
 CLS
+COLOR 10 'Light green
 
 FOR numRow% = 0 TO heightText% - 1
         startPosY% = startPosY% + heightChar * numRow%
