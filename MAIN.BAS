@@ -44,6 +44,8 @@ END SUB
 
 FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
         SELECT CASE char$
+             CASE "h"
+                widthChar% = printChar(lowercaseH(), startPosX%, (startPosY%))
              CASE "R"
                 widthChar% = printChar(uppercaseR(), startPosX%, (startPosY%))
              CASE "r"

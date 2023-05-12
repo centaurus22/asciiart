@@ -1,9 +1,20 @@
+DIM SHARED lowercaseH(8) AS STRING
 DIM SHARED uppercaseR(8) AS STRING
 DIM SHARED lowercaseR(8) AS STRING
 DIM SHARED lowercaseU(8) AS STRING
 DIM SHARED heightChar AS INTEGER
 
 heightChar = 9
+
+lowercaseH(0) = "888     "
+lowercaseH(1) = "888     "
+lowercaseH(2) = "888     "
+lowercaseH(3) = "88888b. "
+lowercaseH(4) = "888 '88b"
+lowercaseH(5) = "888  888"
+lowercaseH(6) = "888  888"
+lowercaseH(7) = "888  888"
+lowercaseH(8) = "        "
 
 uppercaseR(0) = "888888b.  "
 uppercaseR(1) = "888  Y88b "
