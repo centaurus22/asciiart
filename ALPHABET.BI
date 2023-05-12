@@ -1,10 +1,11 @@
-DIM SHARED lowercaseH(8) AS STRING
-DIM SHARED uppercaseR(8) AS STRING
-DIM SHARED lowercaseR(8) AS STRING
-DIM SHARED lowercaseU(8) AS STRING
+DIM SHARED lowercaseH(9) AS STRING
+DIM SHARED lowercaseP(9) AS STRING
+DIM SHARED uppercaseR(9) AS STRING
+DIM SHARED lowercaseR(9) AS STRING
+DIM SHARED lowercaseU(9) AS STRING
 DIM SHARED heightChar AS INTEGER
 
-heightChar = 9
+heightChar = 10
 
 lowercaseH(0) = "888     "
 lowercaseH(1) = "888     "
@@ -15,6 +16,18 @@ lowercaseH(5) = "888  888"
 lowercaseH(6) = "888  888"
 lowercaseH(7) = "888  888"
 lowercaseH(8) = "        "
+lowercaseH(9) = "        "
+
+lowercaseP(0) = "        "
+lowercaseP(1) = "        "
+lowercaseP(2) = "        "
+lowercaseP(3) = "88888b. "
+lowercaseP(4) = "888 ý88b"
+lowercaseP(5) = "888  888"
+lowercaseP(6) = "888 d88P"
+lowercaseP(7) = "888888P'"
+lowercaseP(8) = "888     "
+lowercaseP(9) = "888     "
 
 uppercaseR(0) = "888888b.  "
 uppercaseR(1) = "888  Y88b "
@@ -25,6 +38,7 @@ uppercaseR(5) = "888 T88b  "
 uppercaseR(6) = "888  T88b "
 uppercaseR(7) = "888   T88b"
 uppercaseR(8) = "          "
+uppercaseR(9) = "          "
 
 lowercaseR(0) = "       "
 lowercaseR(1) = "       "
@@ -35,6 +49,7 @@ lowercaseR(5) = "888    "
 lowercaseR(6) = "888    "
 lowercaseR(7) = "888    "
 lowercaseR(8) = "       "
+lowercaseR(9) = "       "
 
 lowercaseU(0) = "        "
 lowercaseU(1) = "        "
@@ -45,4 +60,5 @@ lowercaseU(5) = "888  888"
 lowercaseU(6) = "Y88b 888"
 lowercaseU(7) = "ýY888888"
 lowercaseU(8) = "        "
+lowercaseU(9) = "        "
 

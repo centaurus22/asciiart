@@ -48,6 +48,8 @@ FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
                 widthChar% = printChar(lowercaseH(), startPosX%, (startPosY%))
              CASE "R"
                 widthChar% = printChar(uppercaseR(), startPosX%, (startPosY%))
+             CASE "p"
+                widthChar% = printChar(lowercaseP(), startPosX%, (startPosY%))
              CASE "r"
                 widthChar% = printChar(lowercaseR(), startPosX%, (startPosY%))
              CASE "u"
