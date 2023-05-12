@@ -21,6 +21,8 @@ FOR numRow% = 0 TO heightText% - 1
         CALL printRow(textToPrint$(numRow%), (startPosX%), startPosY%)
 NEXT numRow%
 
+SLEEP
+
 FUNCTION printChar (asciiArt$(), startPosX%, startPosY%)
         FOR asciiArtRowNumber% = 0 TO heightChar - 1
             LOCATE startPosY%, startPosX%
