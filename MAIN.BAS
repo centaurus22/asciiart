@@ -58,6 +58,8 @@ FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
                 widthChar% = printChar(lowercaseO(), startPosX%, (startPosY%))
              CASE "u"
                 widthChar% = printChar(lowercaseU(), startPosX%, (startPosY%))
+             CASE "t"
+                widthChar% = printChar(lowercaseT(), startPosX%, (startPosY%))
              CASE ELSE
                 widthChar% = 0
         END SELECT
