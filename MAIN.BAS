@@ -38,7 +38,7 @@ SUB printRow (row$, startPosX%, startPosY%)
         FOR numChar% = 0 TO widthText% - 1
                 char$ = MID$(row$, numChar% + 1, 1)
                 widthChar% = selectAndPrintChar(char$, startPosX%, startPosY%)
-                startPosX% = startPosX% + widthChar% + 1
+                startPosX% = startPosX% + widthChar% + 2
         NEXT
 END SUB
 
