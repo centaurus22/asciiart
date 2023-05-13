@@ -46,12 +46,16 @@ FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
         SELECT CASE char$
              CASE "h"
                 widthChar% = printChar(lowercaseH(), startPosX%, (startPosY%))
-             CASE "R"
-                widthChar% = printChar(uppercaseR(), startPosX%, (startPosY%))
+             CASE "o"
+                widthChar% = printChar(lowercaseO(), startPosX%, (startPosY%))
              CASE "p"
                 widthChar% = printChar(lowercaseP(), startPosX%, (startPosY%))
+             CASE "R"
+                widthChar% = printChar(uppercaseR(), startPosX%, (startPosY%))
              CASE "r"
                 widthChar% = printChar(lowercaseR(), startPosX%, (startPosY%))
+             CASE "o"
+                widthChar% = printChar(lowercaseO(), startPosX%, (startPosY%))
              CASE "u"
                 widthChar% = printChar(lowercaseU(), startPosX%, (startPosY%))
              CASE ELSE
