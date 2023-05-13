@@ -1,6 +1,7 @@
 DIM SHARED lowercaseA(9) AS STRING
 DIM SHARED lowercaseE(9) AS STRING
 DIM SHARED lowercaseH(9) AS STRING
+DIM SHARED lowercaseL(9) AS STRING
 DIM SHARED uppercaseM(9) AS STRING
 DIM SHARED lowercaseP(9) AS STRING
 DIM SHARED lowercaseO(9) AS STRING
@@ -44,6 +45,17 @@ lowercaseH(6) = "888  888"
 lowercaseH(7) = "888  888"
 lowercaseH(8) = "        "
 lowercaseH(9) = "        "
+
+lowercaseL(0) = "888"
+lowercaseL(1) = "888"
+lowercaseL(2) = "888"
+lowercaseL(3) = "888"
+lowercaseL(4) = "888"
+lowercaseL(5) = "888"
+lowercaseL(6) = "888"
+lowercaseL(7) = "888"
+lowercaseL(8) = "   "
+lowercaseL(9) = "   "
 
 uppercaseM(0) = "888b     d888"
 uppercaseM(1) = "8888b   d8888"

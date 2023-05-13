@@ -50,6 +50,8 @@ FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
                 widthChar% = printChar(lowercaseE(), startPosX%, (startPosY%))
              CASE "h"
                 widthChar% = printChar(lowercaseH(), startPosX%, (startPosY%))
+             CASE "l"
+                widthChar% = printChar(lowercaseL(), startPosX%, (startPosY%))
              CASE "M"
                 widthChar% = printChar(uppercaseM(), startPosX%, (startPosY%))
              CASE "o"
