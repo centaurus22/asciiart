@@ -1,3 +1,4 @@
+DIM SHARED lowercaseE(9) AS STRING
 DIM SHARED lowercaseH(9) AS STRING
 DIM SHARED uppercaseM(9) AS STRING
 DIM SHARED lowercaseP(9) AS STRING
@@ -9,6 +10,17 @@ DIM SHARED lowercaseU(9) AS STRING
 DIM SHARED heightChar AS INTEGER
 
 heightChar = 10
+
+lowercaseE(0) = "        "
+lowercaseE(1) = "        "
+lowercaseE(2) = "        "
+lowercaseE(3) = " .d88b. "
+lowercaseE(4) = "d8P  Y8b"
+lowercaseE(5) = "88888888"
+lowercaseE(6) = "Y8b.    "
+lowercaseE(7) = " øY8888 "
+lowercaseE(8) = "        "
+lowercaseE(9) = "        "
 
 lowercaseH(0) = "888     "
 lowercaseH(1) = "888     "
