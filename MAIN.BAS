@@ -5,16 +5,16 @@ REM $INCLUDE: 'ALPHABET.BI'
 
 '** Data *************************
 
-startPosX% = 1
-startPosY% = 3
+startPosX% = 3
+startPosY% = 4
 heightText% = 2
 textToPrint$(0) = "Ruhrpott"
 textToPrint$(1) = "Metaller"
+COLOR 10 'Light green
 
 '*********************************
 
 CLS
-COLOR 10 'Light green
 
 FOR numRow% = 0 TO heightText% - 1
         startPosY% = startPosY% + heightChar * numRow%
