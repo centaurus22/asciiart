@@ -19,12 +19,25 @@ This software is written in Quickbasic 4.5.
 
 # Installation
  1. Install and configure DosBox if necessary (https://www.dosbox.com/).
- 2. Grap a copy of Quickbasic 4.5.
+ 2. Grab a copy of Quickbasic 4.5.
  3. Add the Quickbasic folder to the PATH variable. Open "Options/Search Paths" in Quickbasic and add the Quickbasic folder as the folder for include files and help files. 
- 2. Clone or download this repository.
- 3. Navigate in the DOS terminal to the repository folder and open the project with QB MAIN.BAS.
+ 4. Clone or download this repository.
+ 5. Navigate in the DOS terminal to the repository folder and open the project with QB MAIN.BAS.
 
 # Using
+## Defining your preferences
+You can make preferences in the Data section of the MAIN.BAS file.
+* `startPosX% = <Integer>`: The vertical starting Point of the ascii art.
+* `startPosY% = <Integer>`: The horizontal starting Point of the ascii art from the top.
+* `textToPrint$(<Row as Integer>) = "<String>"`: An array containing the text to print. The row numbers should start with zero.
+* `heightText% = <Integer>`: The number of rows of the textToPrint$()-Array.
+* `COLOR <Integer>`: The color of the ascii art according to this table: http://qbasicofsanjay.blogspot.com/2012/05/color-statement-and-color-codes.html
+
+## Defining the alphabet
+* ASCII art characters are defined in the ALPHABET.BI file. Do not forget to predefine the array containing the character in the file header. Note the heightChar variable.
+* All ASCII art characters have to be registered in the selectAndPrintChar function of the MAIN.BAS file.
+* You have to close and reopen the Quickbasic IDE before you can use the new ASCII art characters.
+
 
 # Contact
 If you have any question, just drop a message at ruhrpottmetaller@freenet.de.
