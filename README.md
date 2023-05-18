@@ -3,8 +3,8 @@ This is a software for generating ASCII banners on MS-DOS compatible operating s
 
 The Demo alphabet is based on the 'colossal' font of the FIGlet Fonts Library: http://www.jave.de/figlet/fonts/details/colossal.html.
 
-
 ![Screenshot of a sample output](screenshot.png)
+
 # Features
  * Define the ascii text to print.
  * Define the text color.
@@ -28,7 +28,7 @@ This software is written in Quickbasic 4.5.
 # Using
 ## Defining your preferences
 You can make preferences in the Data section of the MAIN.BAS file. The row numbers should always start with zero.
-* `textHeight% = <Integer>`: The number of rows of the textToPrint$()-Array.
+* `textHeight% = <Integer>`: The number of rows of the text array (See below).
 * `startPos(<Row as Integer>).x = <Integer>`: The vertical starting point of the ascii art.
 * `startPosY% = <Integer>`: The horizontal starting point of the ascii art from the top.
 * `text(<Row as Integer>) = "<String>"`: An array containing the text to print.
