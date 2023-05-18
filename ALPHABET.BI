@@ -9,9 +9,9 @@ DIM SHARED uppercaseR(9) AS STRING
 DIM SHARED lowercaseR(9) AS STRING
 DIM SHARED lowercaseT(9) AS STRING
 DIM SHARED lowercaseU(9) AS STRING
-DIM SHARED heightChar AS INTEGER
+DIM SHARED charHeight AS INTEGER
 
-heightChar = 10
+charHeight = 10
 
 lowercaseA(0) = "        "
 lowercaseA(1) = "        "

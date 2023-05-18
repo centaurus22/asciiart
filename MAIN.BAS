@@ -1,73 +1,89 @@
-DECLARE SUB printRow (row$, startPosX%, startPosY%)
-DECLARE FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
-DECLARE FUNCTION printChar (asciiArt$(), startPosX%, startPosY%)
+TYPE Position
+        x AS INTEGER
+        y AS INTEGER
+END TYPE
+
+DECLARE SUB printRow (row$, textPosition AS Position)
+DECLARE FUNCTION selectAndPrintChar (char$, startPos AS Position)
+DECLARE FUNCTION printChar (asciiArt$(), startPos AS Position)
 REM $INCLUDE: 'ALPHABET.BI'
+
+textHeight% = 2
+DIM startPos(textHeight%) AS Position
 
 '** Data *************************
 
-startPosX% = 3
+text$(0) = "Ruhrpott"
+text$(1) = "Metaller"
+
+startPos(0).x = 3
+startPos(1).x = 7
 startPosY% = 4
-heightText% = 2
-textToPrint$(0) = "Ruhrpott"
-textToPrint$(1) = "Metaller"
+
 COLOR 10 'Light green
 
 '*********************************
 
 CLS
 
-FOR numRow% = 0 TO heightText% - 1
-        startPosY% = startPosY% + heightChar * numRow%
-        CALL printRow(textToPrint$(numRow%), (startPosX%), startPosY%)
+FOR numRow% = 0 TO textHeight% - 1
+        startPos(numRow%).y = startPosY% + charHeight * numRow%
+        CALL printRow(text$(numRow%), startPos(numRow%))
 NEXT numRow%
 
 SLEEP
 
-FUNCTION printChar (asciiArt$(), startPosX%, startPosY%)
-        FOR asciiArtRowNumber% = 0 TO heightChar - 1
-            LOCATE startPosY%, startPosX%
+FUNCTION printChar (asciiArt$(), startPos AS Position)
+        'Save the y position because it is passed by refference
+        startPosY% = startPos.y
+
+        FOR asciiArtRowNumber% = 0 TO charHeight - 1
+            LOCATE startPos.y, startPos.x
             PRINT asciiArt$(asciiArtRowNumber%)
-            startPosY% = startPosY% + 1
+            startPos.y = startPos.y + 1
         NEXT
+       
+        'Write the y position back
+        startPos.y = startPosY%
 
         printChar = LEN(asciiArt$(0))
 END FUNCTION
 
-SUB printRow (row$, startPosX%, startPosY%)
+SUB printRow (row$, startPos AS Position)
         widthText% = LEN(row$)
         FOR numChar% = 0 TO widthText% - 1
                 char$ = MID$(row$, numChar% + 1, 1)
-                widthChar% = selectAndPrintChar(char$, startPosX%, startPosY%)
-                startPosX% = startPosX% + widthChar% + 2
+                widthChar% = selectAndPrintChar(char$, startPos)
+                startPos.x = startPos.x + widthChar% + 2
         NEXT
 END SUB
 
-FUNCTION selectAndPrintChar (char$, startPosX%, startPosY%)
+FUNCTION selectAndPrintChar (char$, startPos AS Position)
         SELECT CASE char$
              CASE "a"
-                widthChar% = printChar(lowercaseA(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseA(), startPos)
              CASE "e"
-                widthChar% = printChar(lowercaseE(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseE(), startPos)
              CASE "h"
-                widthChar% = printChar(lowercaseH(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseH(), startPos)
              CASE "l"
-                widthChar% = printChar(lowercaseL(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseL(), startPos)
              CASE "M"
-                widthChar% = printChar(uppercaseM(), startPosX%, (startPosY%))
+                widthChar% = printChar(uppercaseM(), startPos)
              CASE "o"
-                widthChar% = printChar(lowercaseO(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseO(), startPos)
              CASE "p"
-                widthChar% = printChar(lowercaseP(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseP(), startPos)
              CASE "R"
-                widthChar% = printChar(uppercaseR(), startPosX%, (startPosY%))
+                widthChar% = printChar(uppercaseR(), startPos)
              CASE "r"
-                widthChar% = printChar(lowercaseR(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseR(), startPos)
              CASE "o"
-                widthChar% = printChar(lowercaseO(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseO(), startPos)
              CASE "u"
-                widthChar% = printChar(lowercaseU(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseU(), startPos)
              CASE "t"
-                widthChar% = printChar(lowercaseT(), startPosX%, (startPosY%))
+                widthChar% = printChar(lowercaseT(), startPos)
              CASE ELSE
                 widthChar% = 0
         END SELECT
