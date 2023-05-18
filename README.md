@@ -8,7 +8,8 @@ The Demo alphabet is based on the 'colossal' font of the FIGlet Fonts Library: h
 # Features
  * Define the ascii text to print.
  * Define the text color.
- * Define the vertical and horizontal starting point.
+ * Define the horizontal starting points for each line of ascii art.
+ * Define the vertical starting point.
  * Define a whole new ascii alphabet.
 
 # License
@@ -26,11 +27,11 @@ This software is written in Quickbasic 4.5.
 
 # Using
 ## Defining your preferences
-You can make preferences in the Data section of the MAIN.BAS file.
-* `startPosX% = <Integer>`: The vertical starting Point of the ascii art.
-* `startPosY% = <Integer>`: The horizontal starting Point of the ascii art from the top.
-* `textToPrint$(<Row as Integer>) = "<String>"`: An array containing the text to print. The row numbers should start with zero.
-* `heightText% = <Integer>`: The number of rows of the textToPrint$()-Array.
+You can make preferences in the Data section of the MAIN.BAS file. The row numbers should always start with zero.
+* `textHeight% = <Integer>`: The number of rows of the textToPrint$()-Array.
+* `startPos(<Row as Integer>).x = <Integer>`: The vertical starting point of the ascii art.
+* `startPosY% = <Integer>`: The horizontal starting point of the ascii art from the top.
+* `text(<Row as Integer>) = "<String>"`: An array containing the text to print.
 * `COLOR <Integer>`: The color of the ascii art according to this table: http://qbasicofsanjay.blogspot.com/2012/05/color-statement-and-color-codes.html
 
 ## Defining the alphabet
