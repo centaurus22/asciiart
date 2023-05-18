@@ -8,13 +8,19 @@ DECLARE FUNCTION selectAndPrintChar (char$, startPos AS Position)
 DECLARE FUNCTION printChar (asciiArt$(), startPos AS Position)
 REM $INCLUDE: 'ALPHABET.BI'
 
+'** Data block 1 *****************
+
 textHeight% = 2
+
+'*********************************
+
 DIM startPos(textHeight%) AS Position
+DIM text(textHeight%) AS STRING
 
-'** Data *************************
+'** Data block 2 *****************
 
-text$(0) = "Ruhrpott"
-text$(1) = "Metaller"
+text(0) = "Ruhrpott"
+text(1) = "Metaller"
 
 startPos(0).x = 3
 startPos(1).x = 7
@@ -28,7 +34,7 @@ CLS
 
 FOR numRow% = 0 TO textHeight% - 1
         startPos(numRow%).y = startPosY% + charHeight * numRow%
-        CALL printRow(text$(numRow%), startPos(numRow%))
+        CALL printRow(text(numRow%), startPos(numRow%))
 NEXT numRow%
 
 SLEEP
