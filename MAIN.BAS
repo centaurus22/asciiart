@@ -34,7 +34,7 @@ NEXT numRow%
 SLEEP
 
 FUNCTION printChar (asciiArt$(), startPos AS Position)
-        'Save the y position because it is passed by refference
+        'Save the y position because it is passed by reference
         startPosY% = startPos.y
 
         FOR asciiArtRowNumber% = 0 TO charHeight - 1
